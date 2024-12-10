@@ -1,0 +1,84 @@
+
+<!-- <div class="d-flex justify-content-start gap-3 bigdiv"  *ngIf="appearTab"> -->
+<!-- <div class="d-flex"> -->
+
+
+
+  
+<!-- <div class="d-flex" *ngFor="let tab of tabs; let i = index">
+    <div [class.active]="index === i" (click)="changeTab(i)" class="title">
+      {{tab}}</div>
+</div>
+
+</div>
+
+<div class="tab-content" *ngFor="let tab of tabs; let i = index">
+   <ng-container *ngIf="index === i">
+    <div class="tab-body" [class.active]="index === i">
+      <ng-content [select]="'[content'+i+']'"></ng-content>
+    </div>
+   </ng-container>
+  </div>
+   -->
+  
+   
+  <!-- <div class="d-flex flex-column w-100" >
+  <div class="d-flex w-100" >
+    <ul class="nav nav-tabs w-100" style="padding: 0px;" id="myTab" role="tablist" >
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Home</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Profile</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Contact</button>
+      </li>
+    </ul>
+  </div>
+
+
+<div class="">
+  <div class="tab-content" id="myTabContent">
+    <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0" style="color: black;">
+      sdfghjkl;'sdfghjkl;'
+    </div>
+    <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+      asdfghjkl
+    </div>
+    <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">...</div>
+    <div class="tab-pane fade" id="disabled-tab-pane" role="tabpanel" aria-labelledby="disabled-tab" tabindex="0">...</div>
+  </div>
+</div>
+  </div> -->
+
+
+
+
+
+  <div class="d-flex flex-column w-100">
+    <div class="d-flex w-100">
+      <ul class="nav nav-tabs w-100" style="padding: 0px;" id="myTab" role="tablist">
+        <li class="nav-item" *ngFor="let tab of tabs; let i = index" role="presentation">
+          <button class="nav-link" [class.active]="i === 0" id="{{'tab-' + i}}" data-bs-toggle="tab" [attr.data-bs-target]="'#tab-pane-' + i" type="button" role="tab" [attr.aria-controls]="'tab-pane-' + i" [attr.aria-selected]="i === 0">{{tab}}</button>
+        </li>
+      </ul>
+    </div>
+  
+    <div class="tab-content" id="myTabContent">
+      <div class="tab-pane fade show" *ngFor="let tab of tabs; let i = index" [class.active]="i === 0" id="{{'tab-pane-' + i}}" role="tabpanel" [attr.aria-labelledby]="'tab-' + i" tabindex="0" style="color: black;">
+       <ng-content  [select]="'[content'+i+']'">
+         
+       </ng-content>
+      </div>
+    </div>
+  </div>
+
+
+
+  
+
+  
+  
+  
+  

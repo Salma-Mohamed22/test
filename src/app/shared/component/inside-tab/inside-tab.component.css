@@ -1,0 +1,62 @@
+.title {
+    color: rgba(0, 0, 0, 0.80);
+    text-align: right;
+    font-family: Tajawal;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    padding: 10px;
+    min-width: 170px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+/* .active {
+    border: none;
+    background: #FFF;
+    color: #33835C;
+    border-radius: 10px 10px 0px 0px;
+    border-top: 1px solid #33835C;
+    border-right: 1px solid #33835C;
+    border-left: 1px solid #33835C;
+   
+} */
+/* .tab-content> div.active {
+    display: block;
+    border-bottom: 1px solid #33835C;
+    border-top: none;
+    padding-top: 50px;
+    border-radius: 0px 0px 10px 10px;
+}
+.tab-content> div {
+    display: none;
+}
+.bigdiv > div.active{
+    border: 1px solid #fff;
+} */
+
+::ng-deep .nav-tabs {
+        --bs-nav-tabs-border-width: var(--bs-border-width);
+        --bs-nav-tabs-border-color: var(--bs-border-color);
+        --bs-nav-tabs-border-radius: var(--bs-border-radius);
+        --bs-nav-tabs-link-hover-border-color: var(--bs-secondary-bg) var(--bs-secondary-bg) var(--bs-border-color);
+        --bs-nav-tabs-link-active-color: #33835C;
+        --bs-nav-tabs-link-active-bg: var(--bs-body-bg);
+        --bs-nav-tabs-link-active-border-color: #33835C #33835C #fff;
+        border-bottom: var(--bs-nav-tabs-border-width) solid #33835C;
+    }
+::ng-deep .nav-link {
+    color:  rgba(0, 0, 0, 0.80);
+}    
+
+::ng-deep .nav-tabs:hover{
+        --bs-nav-tabs-border-width: var(--bs-border-width);
+        --bs-nav-tabs-border-color: var(--bs-border-color);
+        --bs-nav-tabs-border-radius: var(--bs-border-radius);
+        --bs-nav-tabs-link-hover-border-color: #F6F6F6 #F6F6F6  #33835C #F6F6F6 ;
+
+}
+::ng-deep .nav-link:hover {
+color:  rgba(0, 0, 0, 0.80);
+}   
